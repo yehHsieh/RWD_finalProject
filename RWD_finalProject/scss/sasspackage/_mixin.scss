@@ -1,0 +1,78 @@
+/*隱藏文字*/
+@mixin hideText{
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+/*左右線條*/
+@mixin asideLine{
+    position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            width: 100px;
+            height: 1px;
+            background: #979797;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 25%;
+            width: 100px;
+            height: 1px;
+            background: #979797;
+        }
+}
+/*底線條*/
+@mixin bottomLine{
+    position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 25%;
+            width: 100px;
+            height: 1px;
+            background: #979797;
+        }
+}
+
+/*購物車數量*/
+@mixin cartNum{
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: 4px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #fff;
+    background: #ff5e45;
+    border-radius: 50%;
+}
+// .header h1{
+//     @include hideText;
+// }
+
+/*圓形*/
+@mixin circle($size, $color){
+    border-radius: 50%;
+    height: $size;
+    width: $size;
+    font-size: $size/3;
+    background: $color;
+}
+
+// .box1{
+//     @include circle(30px, #000)
+// }
+// .box2{
+//     @include circle(20px, yellow)
+// }
+

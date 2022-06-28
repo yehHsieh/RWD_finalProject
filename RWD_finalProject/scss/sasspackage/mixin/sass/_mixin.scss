@@ -1,0 +1,27 @@
+/*隱藏文字*/
+@mixin hideText{
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+// .header h1{
+//     @include hideText;
+// }
+
+/*圓形*/
+@mixin circle($size, $color){
+    border-radius: 50%;
+    height: $size;
+    width: $size;
+    font-size: $size/3;
+    background: $color;
+}
+
+// .box1{
+//     @include circle(30px, #000)
+// }
+// .box2{
+//     @include circle(20px, yellow)
+// }
+

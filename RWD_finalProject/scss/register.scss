@@ -1,0 +1,117 @@
+@import 'layout';
+
+
+
+.main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    h2{
+        font-size: $large-letter;
+    }
+    h3,h4{
+        margin-bottom: 3%;
+    }
+    h2,h3,h4{
+        font-weight: bold;
+        color: $color2;
+        text-align: center;
+    }
+    .registContain{
+        width: 75%;
+        border-top: 2px solid $color3;
+        color: $color2;
+        padding:0 2%;
+        box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.25) ;
+    }
+    .register{
+        display: flex;
+        
+        width: 100%;
+        flex-wrap: wrap;
+        .word{
+            width: 45%;
+            padding: 3%;
+            @include iphone12(){
+                width: 100%;
+            }
+        }
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 1%;
+        text-align: left;
+        width: 45%;
+        
+        
+        
+        @include ipad(){
+            width: 50%;
+        }
+        @include iphone12(){
+            width: 70%;
+        }
+        label,input{
+            display: block;
+            width: 100%;
+            margin-bottom: 2%;
+        }
+        input{
+            padding-left: 10%;
+            @include iphone12(){
+                padding-left: 15%;
+            }
+        }
+        .envelope{
+            position: relative;
+            i{
+                position: absolute;
+                top: 8%;
+                left: 2%;
+            }
+        }
+        .lock{
+            position: relative;
+            i{
+                &:nth-child(2){
+                    position: absolute;
+                    top: 4%;
+                    left: 2%;
+                }
+                &:nth-child(4){
+                    position: absolute;
+                    bottom: 14%;
+                    left: 2%;
+                }
+            }
+            
+        }
+        a{
+            color: $color3;
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 5%;
+            a{
+                width: 45%;
+                display: block;
+                margin: 3%;
+                padding: 1%;
+                text-align: center;
+                border-radius: 5%;
+                color: $color1;
+                background: $color3;
+                cursor: pointer;
+                &:hover{
+                    background: $color2;
+                }
+            }
+        }
+    }
+    
+}

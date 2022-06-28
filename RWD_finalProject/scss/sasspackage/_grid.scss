@@ -1,0 +1,13 @@
+/*ipad*/
+@mixin ipad{
+    @media(max-width: 768px){
+        @content
+    }
+}
+
+/*iphone12*/
+@mixin ipad{
+    @media(max-width: 390px){
+        @content
+    }
+}

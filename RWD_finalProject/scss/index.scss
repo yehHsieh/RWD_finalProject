@@ -1,0 +1,202 @@
+@import 'layout';
+
+
+.main{
+    h2{
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            width: 100px;
+            height: 1px;
+            background: #979797;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 25%;
+            width: 100px;
+            height: 1px;
+            background: #979797;
+        }
+    }
+    h2,h3{
+        @include smallHead();
+    }
+    .container{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: 0 5% 5%;
+        li{
+            width: 30%;
+            padding: 1%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $color2;
+            font-size: $small-letter*0.5;
+            img{
+                border-radius: 50%;
+                margin-bottom: 3%;
+            }
+            @include iphone12{
+                width: 100%;
+                margin-bottom: 3%;
+            }
+        }
+    }
+}
+
+.chief{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0 3%;
+    background:$color2;
+    color:$color1;
+    font-size: $small-letter*0.7;
+    
+    img{
+        background-size: cover;
+        width: 45%;
+        margin-right: 4%;
+        @include ipad(){
+            width: 70%;
+            }
+        }
+    }
+    .chiefInf{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 45%;
+        padding: 2% 0;
+        h3{
+            font-weight: bold;
+            margin-bottom: 3%;
+        }
+        @include ipad(){
+            width: 70%;
+            }
+        }
+    .feedback { padding: 3%;
+                h3{
+                    @include smallHead();
+                }
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    li{
+                        display: flex;
+                        width: 31%;
+                        margin: 1%;
+                        @include ipad(){
+                            width: 70%;
+                        }
+                        @include iphone12(){
+                            width: 100%;
+                           
+                        }
+                        img{
+                            width: 5.6em;
+                            height: 5.6em;
+                            border-radius: 50%;
+                            margin-bottom: 3%;
+                        }
+                        h4{
+                            margin-bottom: 10%;
+                            color: $color2;
+                            font-weight: bold;
+                        }
+                        .feedbackContain{
+                            padding-left: 5%;
+                            color: $color2;
+                            span{
+                                display: flex;
+                                justify-content: flex-end;
+                            }
+                        }
+                    }
+                    }
+                }
+    .reservation{
+        width: 100%;
+        background: #FAFAFA;
+        padding: 3%;
+        h3{
+            @include largeHead();
+        }
+       
+        .reservationContain{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2%;
+            color:$color2;
+            img{
+                width: 45%;
+                object-fit: cover;
+                @include iphone12(){
+                    width: 100%;   
+                } 
+            }
+            form{
+                width: 48%;
+                margin-left: 3%;
+                @include iphone12(){
+                    width: 100%;   
+                }    
+            }
+        }
+        .fill{
+            input{
+                display: block;
+                width: 100%;
+                margin-bottom: 2%;
+                
+            }
+        }
+       .vegetarian{
+        margin-bottom: 3%;
+        .vegetarianAsk{
+                display: block;
+                }
+            label{
+                margin-right: 20%;   
+                }
+            input{
+                cursor: pointer;
+            }
+         }
+        .button{
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            input{
+                margin-right: 2%;
+                border:none;
+                border-radius: 30%;
+                padding: 2%;
+                cursor: pointer;
+                &:nth-child(1) {
+                    background: rgba(0, 0, 0, 0.35);}
+                &:nth-child(2) {
+                    background: $color3}
+                &:hover{
+                    background-color:$color2;
+                    color:$color1;
+                }
+            }
+        }
+        
+    }
+            
+    

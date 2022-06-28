@@ -1,0 +1,300 @@
+@import "sasspackage/reset";
+
+@mixin hideText{
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@mixin asideLine{
+    position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            width: 100px;
+            height: 1px;
+            background: #979797;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 25%;
+            width: 100px;
+            height: 1px;
+            background: #979797;
+        }
+}
+@mixin bottomLine{
+    position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            top:110%;
+            left: 25%;
+            width: 100px;
+            height: 1px;
+            background: $color2;
+        }
+}
+@mixin cartNum{
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #fff;
+    background: #ff5e45;
+    border-radius: 50%;
+}
+
+@mixin ipad{
+    @media(max-width: 768px){
+        @content;
+    }
+}
+@mixin iphone12{
+    @media(max-width: 390px){
+        @content;
+    }
+}
+
+@mixin largeHead {
+    text-align: center;
+    font-size: $large-letter*0.6;
+    color: $color2;
+    margin: 2% 0;
+} 
+@mixin smallHead {
+    text-align: center;
+    color: $color2;
+    font-size: $small-letter*0.7;
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+
+
+
+$small-letter:24px;
+$large-letter:48px;
+$color1:#fff;
+$color2:#3D1101;
+$color3:#FF5E45;
+$headcolor:rgba(0,0,0,0.75);
+$backgroundcolor:#efe9e7;
+
+
+
+
+
+
+
+
+// *{
+//     outline: 1px solid black;
+// }
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+  }
+.wrap{
+    max-width: 1024px;
+    margin: 0 auto;
+    background: #efe9e7;
+    line-height: 1.5;
+    position: relative;
+}
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $headcolor;
+    padding: 0 2%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    // position: relative;
+    h1 a{
+        @include hideText();
+        display: block;
+        width: 120px;
+        height: 24px;
+        background: url(../img/logo_w@svg.svg) no-repeat;
+        }
+    .menu{
+        display: flex;
+        @include iphone12(){
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height 2s;
+            top: 35px;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background:$headcolor ;
+            text-align: center;
+           
+        }
+        a{
+            display: block;
+            color:$color1;
+            padding: 18px 16px;
+            &:hover{
+                background-color: $color2;
+            }
+        }
+    }
+    .showMenu{
+        display: none;
+        @include iphone12(){
+            display: block;
+            font-size: $small-letter;
+        }
+    }
+}
+.showList .menu{
+    height: 500px;
+}
+
+.banner{
+    background-size: cover;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    margin-bottom: 3%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(/img/header_desktop.png) no-repeat;
+    @include ipad(){
+        background: url(/img/Bitmap.png) no-repeat ;
+        background-size: cover;
+        
+    }
+    @include iphone12(){
+        background: url(/img/Bitmap.png) no-repeat;
+    }
+    .banner-content{
+        background: rgba(0, 0, 0, 0.35);
+        padding: 3% 2%;
+    }
+    h2, p{
+        text-align: center;
+        color: $color1;
+    }
+    h2{
+        font-size: $large-letter;
+        margin-bottom: 0.5%;
+    }
+    p{
+        font-size: $small-letter*0.8;
+        letter-spacing: 1px;
+    }
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3%;
+    color: $color2;
+    flex-wrap: wrap;
+    @include ipad(){
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        
+    }
+    .imf{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 65%;
+        margin-bottom: 5%;
+        
+        .about, .contact{
+            width: 50%;
+            padding: 5% 3%;
+            font-size: $small-letter*0.7;
+            text-align: left;
+            @include ipad(){
+                width: 70%;
+                font-size: $small-letter*0.5;
+            }
+            @include iphone12(){
+                width: 100%;
+                font-size: $small-letter*0.5;
+            }
+            h3{
+                margin-bottom: 5%;
+                font-weight: bold;
+            }   
+        }
+        ul{
+            list-style: disc inside ;
+            
+            a{
+                color: $color2;
+            }
+        }
+    }
+    .footerMedia {
+        width: 30%;
+        @include ipad(){
+            width: 60%;
+        }
+        h3{
+            max-width: 100%;
+            a{  display: block;
+                background: url(/img/logo_l@svg.svg) no-repeat;
+                background-position: 50% 50%;
+                background-size: contain;
+                width: 246x;
+                height: 50px;
+                @include hideText();
+                margin-bottom: 5%;
+            }
+        }
+        ul{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 4%;
+        @include ipad(){
+            justify-content: center;
+        }
+            li{
+                margin-left: 3%;
+                margin-bottom: 5%;
+                a{
+                    display: block;
+                    font-size: 36px;   
+                }
+            }
+            .google{
+                color: #db4437; 
+            }
+            .twitter{
+                color: #41abe1;
+            }
+            .facebook{
+                color: #3a5795;
+            }
+        
+        }
+    }
+}
+
+

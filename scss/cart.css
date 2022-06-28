@@ -173,19 +173,19 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url(/img/header_desktop.png) no-repeat;
+  background: url(../img/header_desktop.png) no-repeat;
   background-size: cover;
   margin-bottom: 3%;
 }
 @media (max-width: 768px) {
   .banner {
-    background: url(/img/Bitmap.png) no-repeat;
+    background: url(../img/Bitmap.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 390px) {
   .banner {
-    background: url(/img/Bitmap.png) no-repeat;
+    background: url(../img/Bitmap.png) no-repeat;
   }
 }
 .banner .banner-content {
@@ -283,7 +283,7 @@ a {
 }
 .footer .footerMedia h3 a {
   display: block;
-  background: url(/img/logo_l@svg.svg) no-repeat;
+  background: url(../img/logo_l@svg.svg) no-repeat;
   background-position: 50% 50%;
   background-size: contain;
   width: 246x;
@@ -538,21 +538,21 @@ a {
 .main .content .product .hamburger h3 {
   width: 300px;
   height: 120px;
-  background: url(/img/product_1.png) no-repeat;
+  background: url(../img/product_1.png) no-repeat;
   text-indent: 101%;
   white-space: nowrap;
   overflow: hidden;
 }
 @media (max-width: 390px) {
   .main .content .product .hamburger h3 {
-    background: url(/img/product_1@2x.png);
+    background: url(../img/product_1@2x.png);
     background-size: contain;
   }
 }
 .main .content .product .sausage h3 {
   width: 300px;
   height: 120px;
-  background: url(/img/product_2.png) no-repeat;
+  background: url(../img/product_2.png) no-repeat;
   text-indent: 101%;
   white-space: nowrap;
   overflow: hidden;
@@ -560,7 +560,7 @@ a {
 .main .content .product .hamburgerBro h3 {
   width: 300px;
   height: 120px;
-  background: url(/img/product_3.png) no-repeat;
+  background: url(../img/product_3.png) no-repeat;
   text-indent: 101%;
   white-space: nowrap;
   overflow: hidden;
@@ -568,7 +568,7 @@ a {
 .main .content .product .set h3 {
   width: 300px;
   height: 120px;
-  background: url(/img/product_4.png) no-repeat;
+  background: url(../img/product_4.png) no-repeat;
   text-indent: 101%;
   white-space: nowrap;
   overflow: hidden;

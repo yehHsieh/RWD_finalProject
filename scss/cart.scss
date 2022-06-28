@@ -146,10 +146,10 @@
             .hamburger{
                 h3{ width: 300px;
                     height: 120px;
-                    background: url(/img/product_1.png) no-repeat;
+                    background: url(../img/product_1.png) no-repeat;
                     @include hideText();
                     @include iphone12(){
-                        background: url(/img/product_1@2x.png);
+                        background: url(../img/product_1@2x.png);
                     background-size: contain;
                     
                     }
@@ -159,7 +159,7 @@
                 h3{
                     width: 300px;
                     height: 120px;
-                    background: url(/img/product_2.png) no-repeat;
+                    background: url(../img/product_2.png) no-repeat;
                     @include hideText();
                 }
             }
@@ -167,7 +167,7 @@
                 h3{
                     width: 300px;
                     height: 120px;
-                    background: url(/img/product_3.png) no-repeat;
+                    background: url(../img/product_3.png) no-repeat;
                     @include hideText();
                 }
             }
@@ -175,7 +175,7 @@
                 h3{
                     width: 300px;
                     height: 120px;
-                    background: url(/img/product_4.png) no-repeat;
+                    background: url(../img/product_4.png) no-repeat;
                     @include hideText();
                 }
             }

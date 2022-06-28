@@ -73,7 +73,7 @@ a {
 }
 
 .wrap {
-  max-width: 1024px;
+  max-width: 100%;
   margin: 0 auto;
   background: #efe9e7;
   line-height: 1.5;
@@ -164,6 +164,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 3%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -197,10 +198,11 @@ a {
 }
 .banner h2 {
   font-size: 48px;
-  margin-bottom: 3%;
+  margin-bottom: 0.5%;
 }
 .banner p {
-  font-size: 24px;
+  font-size: 19.2px;
+  letter-spacing: 1px;
 }
 
 .footer {
@@ -211,7 +213,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  padding-top: 3%;
+  padding: 3%;
   color: #3D1101;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;

@@ -73,7 +73,7 @@ a {
 }
 
 .wrap {
-  max-width: 1024px;
+  width: 100%;
   margin: 0 auto;
   background: #efe9e7;
   line-height: 1.5;
@@ -158,13 +158,11 @@ a {
 }
 
 .banner {
-  background-size: cover;
   width: 100%;
   height: 420px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 3%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -176,6 +174,8 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   background: url(/img/header_desktop.png) no-repeat;
+  background-size: cover;
+  margin-bottom: 3%;
 }
 @media (max-width: 768px) {
   .banner {
@@ -331,134 +331,245 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.main h2 {
-  font-size: 48px;
-}
-.main h3, .main h4 {
-  margin-bottom: 3%;
-}
-.main h2, .main h3, .main h4 {
-  font-weight: bold;
-  color: #3D1101;
-  text-align: center;
-}
-.main .registContain {
-  width: 75%;
-  border-top: 2px solid #FF5E45;
-  color: #3D1101;
-  padding: 0 2%;
-  -webkit-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.25);
-          box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.25);
-}
-.main .register {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: 3%;
+  padding: 0 1%;
 }
-.main .register .word {
-  width: 45%;
-  padding: 3%;
+.main .online {
+  width: 24%;
+  color: #3D1101;
+  margin: 0 1%;
+}
+@media (max-width: 768px) {
+  .main .online {
+    width: 30%;
+  }
 }
 @media (max-width: 390px) {
-  .main .register .word {
+  .main .online {
     width: 100%;
   }
 }
-.main form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0 auto;
-  padding: 1%;
-  text-align: left;
-  width: 45%;
+.main .online h3 {
+  text-align: center;
+  font-size: 28.8px;
+  color: #3D1101;
+  margin: 2% 0;
+}
+.main .online li {
+  border-bottom: 1px solid #3D1101;
+}
+.main .online li a {
+  display: block;
+  font-size: 14.4px;
+  color: #3D1101;
+  padding: 3%;
+}
+.main .online li a:hover {
+  color: #fff;
+  background: #3D1101;
+}
+.main .content {
+  width: 73%;
+  color: #3D1101;
 }
 @media (max-width: 768px) {
-  .main form {
-    width: 50%;
+  .main .content {
+    width: 65%;
   }
 }
 @media (max-width: 390px) {
-  .main form {
+  .main .content {
+    width: 100%;
+  }
+}
+.main .content .searchBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3%;
+}
+.main .content .searchBar .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+}
+@media (max-width: 390px) {
+  .main .content .searchBar .search {
+    width: 100%;
+  }
+}
+.main .content .searchBar .search input {
+  width: 100%;
+}
+.main .content .searchBar .search button {
+  color: #fff;
+  background: #3D1101;
+  font-size: 24px;
+}
+.main .content .searchBar .search button:hover {
+  cursor: pointer;
+}
+.main .content .searchBar .decide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 25%;
+  font-size: 24px;
+  font-weight: bold;
+}
+@media (max-width: 390px) {
+  .main .content .searchBar .decide {
+    width: 100%;
+  }
+}
+.main .content .searchBar .decide li {
+  padding: 3%;
+}
+.main .content .searchBar .decide li:nth-child(1) {
+  border-right: 1px solid #3D1101;
+}
+.main .content .searchBar .decide li:nth-child(2) {
+  position: relative;
+}
+.main .content .searchBar .decide li a {
+  display: block;
+  color: #3D1101;
+}
+.main .content .searchBar .decide li a:hover {
+  cursor: pointer;
+  color: rgba(61, 17, 1, 0.75);
+}
+.main .content .searchBar .decide li a span {
+  font-size: 4.8px;
+  display: block;
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: #fff;
+  background: #ff5e45;
+  border-radius: 50%;
+}
+.main .content .product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 390px) {
+  .main .content .product {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.main .content .product li {
+  width: 31%;
+  overflow: hidden;
+  text-align: center;
+  margin: 1% 1%;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+@media (max-width: 768px) {
+  .main .content .product li {
+    width: 48%;
+  }
+}
+@media (max-width: 390px) {
+  .main .content .product li {
     width: 70%;
   }
 }
-.main form label, .main form input {
-  display: block;
-  width: 100%;
-  margin-bottom: 2%;
+.main .content .product li span a {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  color: #fff;
+  font-size: 20px;
 }
-.main form input {
-  padding-left: 10%;
+.main .content .product li h4 {
+  position: relative;
+  margin-bottom: 5%;
+}
+.main .content .product li h4::before {
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 25%;
+  width: 100px;
+  height: 1px;
+  background: #3D1101;
+}
+.main .content .product li button {
+  width: 90%;
+  margin: 3%;
+  border: 1px solid #FF5E45;
+  color: #FF5E45;
+  font-size: 16.8px;
+}
+.main .content .product li button:hover {
+  cursor: pointer;
+  background: #FF5E45;
+  color: #fff;
+}
+.main .content .product .hamburger h3 {
+  width: 300px;
+  height: 120px;
+  background: url(/img/product_1.png) no-repeat;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 @media (max-width: 390px) {
-  .main form input {
-    padding-left: 15%;
+  .main .content .product .hamburger h3 {
+    background: url(/img/product_1@2x.png);
+    background-size: contain;
   }
 }
-.main form .envelope {
-  position: relative;
+.main .content .product .sausage h3 {
+  width: 300px;
+  height: 120px;
+  background: url(/img/product_2.png) no-repeat;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.main form .envelope i {
-  position: absolute;
-  top: 8%;
-  left: 2%;
+.main .content .product .hamburgerBro h3 {
+  width: 300px;
+  height: 120px;
+  background: url(/img/product_3.png) no-repeat;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.main form .lock {
-  position: relative;
-}
-.main form .lock i:nth-child(2) {
-  position: absolute;
-  top: 4%;
-  left: 2%;
-}
-.main form .lock i:nth-child(4) {
-  position: absolute;
-  bottom: 14%;
-  left: 2%;
-}
-.main form a {
-  color: #FF5E45;
-}
-.main form .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  margin-top: 5%;
-}
-.main form .button a {
-  width: 45%;
-  display: block;
-  margin: 3%;
-  padding: 1%;
-  text-align: center;
-  border-radius: 5%;
-  color: #fff;
-  background: #FF5E45;
-  cursor: pointer;
-}
-.main form .button a:hover {
-  background: #3D1101;
+.main .content .product .set h3 {
+  width: 300px;
+  height: 120px;
+  background: url(/img/product_4.png) no-repeat;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
 }
